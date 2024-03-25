@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Vacnic</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/royal-preload.css" />
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
+
+    <style>
+        .spinny-wrapper {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+
+        }
+
+        .spinny-words {
+            display: inline-block;
+            min-width: 350px;
+            text-align: left;
+        }
+
+        .spinny-words span {
+            position: absolute;
+            font-weight: 200;
+            letter-spacing: 4px;
+            top: -0px;
+            opacity: 0;
+            animation: rotateWord 10s linear infinite 0s;
+            margin-bottom: 0;
+            padding-left: 10px;
+            font-size: 2.4rem;
+
+        }
+
+        .spinny-words span:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .spinny-words span:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        .spinny-words span:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        .spinny-words span:nth-child(5) {
+            animation-delay: 8s;
+        }
+
+        .spinny-words span:nth-child(6) {
+            animation-delay: 10s;
+        }
+
+        @keyframes rotateWord {
+            0% {
+                opacity: 0;
+            }
+
+            2% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            5% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            17% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            20% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .text-focus-in {
+            animation: text-focus-in 3s ease-in-out infinite both;
+            font-size: 9rem;
+            color: #201D3C;
+            margin: 0;
+            letter-spacing: -5px;
+            /* text-decoration: underline;
+            text-underline-offset: 8px;
+            text-decoration-thickness: 4px;
+            text-decoration-color: #83d8ff; */
+        }
+
+        @keyframes text-focus-in {
+            0% {
+                filter: blur(12px);
+                opacity: 0;
+            }
+
+            100% {
+                filter: blur(0px);
+                opacity: 1;
+            }
+        }
+
+        .italic-text {
+            font-style: italic;
+            font-size: 20px;
+            letter-spacing: 2px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .circlee {
+            margin-top: 120px;
+            width: 380px;
+            height: 380px;
+            background-color: #83d8ff;
+            border-radius: 50%;
+            z-index: -3;
+            position: absolute;
+            top: 0;
+            left: 90px;
+            text-decoration: none;
+        }
+
+        .boxnew {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .boxnew>div {
+            width: 27vw;
+
+            p {
+                /* text-align: justify; */
+                margin-top: 40px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 20px;
+                color: #201D3C;
+            }
+
+        }
+
+        .cursor {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            position: absolute;
+            transition-duration: 200ms;
+            transition-timing-function: ease-out;
+            animation: cursorAnim .5s infinite alternate;
+            background-color: #83d8ff;
+        }
+
+        cursor::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border: 4px solid pink;
+            border-radius: 50%;
+            opacity: .5;
+            top: -8px;
+            left: -8px;
+            animation: cursorAnim2;
+        }
+
+
+        @keyframes cursorAnim2 {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(.4);
+            }
+        }
+
+        @keyframes cursorAnim3 {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(3);
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        .expand {
+            animation: cursorAnim3 .5s forwards;
+            border: 1px solid plum;
+        }
+
+        .cwebblue {
+            background-color: #6336F0;
+            padding-top: 50px;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        /* Mobile devices (portrait and landscape) */
+        @media only screen and (max-width: 767px) {
+            .text-focus-in {
+                font-size: 3rem;
+                color: #201D3C;
+                margin: 0;
+            }
+
+            .spinny-words span {
+                font-size: 1.0rem;
+            }
+
+            .boxnew {
+                display: flex;
+                justify-content: center;
+            }
+
+            .boxnew>div {
+                width: fit-content;
+            }
+
+            .spinny-wrapper {
+
+                height: 6vh;
+            }
+
+            .circlee {
+                margin-top: 120px;
+                width: 350px;
+                height: 350px;
+                background-color: #83d8ff;
+                border-radius: 50%;
+                z-index: -3;
+                position: absolute;
+                top: -70px;
+                left: 100px;
+                text-decoration: none;
+            }
+
+            .italic-text {
+                font-style: italic;
+                font-size: 14px;
+                letter-spacing: 2px;
+                padding: 0;
+                margin: 0;
+            }
+
+            .cwebblue {
+                width: fit-content !important;
+                height: 25vh !important;
+            }
+
+            .et_pb_column {
+                width: fit-content !important;
+
+            }
+        }
+
+        /* Tablet devices */
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            /* Your tablet styles go here */
+        }
+    </style>
+</head>
+
+<body class="royal_preloader">
+    <div class="cursor"></div>
+    <div id="page" class="site">
+        <header id="site-header" class="site-header sticky-header header-static">
+            <!-- Main Header start -->
+            <div class="header-topbar style-2">
+                <div class="octf-area-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <ul class="social-list">
+                                    <li><a href="https://twitter.com/VacnicS" target="_self"><i
+                                                class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li><a href="https://www.facebook.com/vacnicitsolution/" target="_self"><i
+                                                class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/vacnicitsolution/?originalSubdomain=in"
+                                            target="_self"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.instagram.com/vacnicitsolution/?hl=en" target="_self"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8">
+                                <ul class="topbar-info align-self-end clearfix">
+                                    <li><a href="tel:+91 966 755 6466"><i class="fas fa-phone-alt"></i> +91 966 755
+                                            6466</a>
+                                    </li>
+                                    <li><a href="mailto:info@vacnic.com"><i class="fas fa-envelope"></i>
+                                            info@vacnic.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="octf-main-header">
+                <div class="octf-area-wrap">
+                    <div class="container octf-mainbar-container">
+                        <div class="octf-mainbar">
+                            <div class="octf-mainbar-row octf-row">
+                                <div class="octf-col logo-col">
+                                    <div id="site-logo" class="site-logo">
+                                        <a href="index.html">
+                                            <img src="images/logoVacnic.svg" alt="Vacnic" class="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="octf-col menu-col">
+                                    <nav id="site-navigation" class="main-navigation">
+                                        <ul class="menu">
+                                            <li class="current-menu-item current-menu-ancestor">
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item-has-children"><a href="#">Web Solution</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="WebDevlopement.html">Web Development</a></li>
+                                                            <li><a href="Webdesign.html">Web Design</a></li>
+
+
+                                                        </ul>
+                                                    </li>
+
+                                                    <li class="menu-item-has-children"><a href="#">Marketing</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="Digitalmarketing.html">Digital Marketing</a>
+                                                            </li>
+                                                            <li><a href="SEO.html">SEO Services</a></li>
+                                                            <li><a href="Socialmarketing.html">Social Media
+                                                                    Marketing</a></li>
+
+                                                        </ul>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children"><a href="#">Company</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="about-us.html">About us</a></li>
+                                                    <li><a href="careers.html">Careers</a></li>
+                                                    <li><a href="faq.html">FAQ</a></li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_mobile">
+                <div class="container">
+                    <div class="mlogo_wrapper clearfix">
+                        <div class="mobile_logo">
+                            <a href="index-2.html">
+                                <img src="images/logoVacnic.svg" alt="Vacnic" class="">
+                            </a>
+                        </div>
+                        <div id="mmenu_toggle">
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="mmenu_wrapper">
+                        <div class="mobile_nav collapse">
+                            <ul id="menu-main-menu" class="mobile_mainmenu">
+                                <li class="menu-item-has-children current-menu-item current-menu-ancestor">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Company</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us.html">About us</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Services</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item-has-children"><a href="#">Web Solution</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="WebDevlopement.html">Web Development</a></li>
+                                                <li><a href="Webdesign.html">Web Design</a></li>
+                                                <li><a href="LaravelDevlopemnt.html">Laravel Development</a></li>
+                                                <li><a href="CodeigniterDevlopment.html">Codeigniter Development</a>
+                                                </li>
+                                                <li><a href="AngularDevlopment.html">Angular Development</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="menu-item-has-children"><a href="#">Marketing</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="Digitalmarketing.html">Digital Marketing</a></li>
+                                                <li><a href="SEO.html">SEO Services</a></li>
+                                                <li><a href="Socialmarketing.html">Social Media Marketing</a></li>
+                                                <li><a href="ItSupport.html">IT Support</a></li>
+                                                <li><a href="Managedhosting.html">Managed Hosting</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="blog-grid.html">Case Studies</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="get_estimate.html">Get Estimate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="content" class="site-content">
+            <div class="new-division"></div>
+            <section class="over-hidden">
+                <div class="container">
+
+
+                    <div class="wrapper">
+                        <div class="spinny-wrapper">
+                            <h1>
+                                <span class="spinny-words">
+                                    <span>Awesome</span>
+                                    <span>Amazing</span>
+                                    <span>Legendary</span>
+                                    <span>Super duper</span>
+                                    <span>Fantistic</span>
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="circlee">
+
+                        </div>
+                        <div class="animation-tbd-box">
+                            <h1 class="text-focus-in" id="changingText">amazing</h1>
+                            <p class="italic-text">Your Vision, Our Craft: Collaboratively, We Shape The Ideal
+                                Trajectory</p>
+                        </div>
+
+                    </div>
+                    <div class="boxnew">
+                        <div>
+                            <p>We specialize in delivering fully operational websites, mobile applications, and
+                                comprehensive online business solutions.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="over-hidden">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-12 align-self-center">
+                            <div class="ot-heading">
+                                <span>About company</span>
+                                <h2 class="main-heading">Your Partner for <br> Software Innovation</h2>
+                            </div>
+                            <p class="mb-15">As your dedicated partner for software innovation, our company is committed
+                                to driving technological advancements and delivering cutting-edge solutions. We
+                                specialize in harnessing the power of innovation to create software that not only meets
+                                but exceeds the evolving needs of our clients. </p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="icon-box-s1">
+                                        <div class="icon-main"><span class="flaticon-medal"></span></div>
+                                        <h5>Experience</h5>
+                                        <div class="line-box"></div>
+                                        <p>Our team is devoted to excellence in development
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="icon-box-s1">
+                                        <div class="icon-main"><span class="flaticon-gear"></span></div>
+                                        <h5>Quick Support</h5>
+                                        <div class="line-box"></div>
+                                        <p>Where we deliver efficient assistance for websites</p>
+                                    </div>
+                                </div>
+                                <div class="space-15"></div>
+                            </div>
+                        </div>
+                        <div class="offset-lg-1 col-lg-6 col-md-12 align-self-center">
+                            <div class="about-right">
+                                <div class="img-small">
+                                    <img class="img-small-1" src="images/home-about-small-1.jpg" alt="">
+                                    <img class="img-small-2" src="images/home-about-small-2.jpg" alt="">
+                                </div>
+                                <div class="home-about-video d-flex justify-content-center">
+                                    <div class="video-btn align-self-center">
+                                        <span class="circle-1"></span>
+                                        <span class="circle-2"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="padding-top: 60px;padding-bottom: 60px; ">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="ot-heading">
+
+                            <h2 class="main-heading ">Best Services With You Cover</h2>
+                            <span class="text-secondary">Our Custom Digital Services</span>
+                        </div>
+                        <div class="space-20"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="WebDevlopement.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"><span class="flaticon-tablet"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="content-box text-center">
+                                        <h5>Wordpress <br>Website</h5>
+                                        <div>Crafting dynamic WordPress websites for seamless user experiences and
+                                            effective
+                                            online presence
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="WebDevlopement.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"> <span class="flaticon-ui"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>Website Development</h5>
+                                        <div>Crafting dynamic websites tailored to your needs for a seamless online <br>
+                                            presence.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="Webdesign.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"><span class="flaticon-report"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>Website <br> Redesign</h5>
+                                        <div>Revamp your online presence with our expert website redesign services for
+                                            improvement.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="cybersecurity.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"><span class="flaticon-shield"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>Cyber Security Services</h5>
+                                        <div>Protect your digital assets with our expert <br> cybersecurity services and
+                                            solutions.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="Webdesign.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"><span class="flaticon-tablet"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>E-Commerce Website</h5>
+                                        <div>Explore seamless online shopping with our user-friendly, secure e-commerce
+                                            website solutions.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="Webdesign.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"> <span class="flaticon-ui"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>Graphic & Logo Design</h5>
+                                        <div>Elevate your brand with captivating graphic and logo designs for a lasting
+                                            visual impression.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="Digitalmarketing.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"><span class="flaticon-report"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>SEO <br>Services</h5>
+                                        <div>Elevate your online presence with top-notch SEO services for enhanced
+                                            visibility and success.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <a href="hosting.html">
+                                <div class="serv-box-2 s2">
+                                    <div class="middilerp">
+                                        <div class="icon-main"><span class="flaticon-shield"></span></div>
+                                    </div>
+                                    <div class="content-box text-center">
+                                        <h5>Hosting <br>Services</h5>
+                                        <div>Reliable hosting solutions for seamless website performance and optimal
+                                            online
+                                            presence.
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-0 pb-290">
+
+
+
+
+
+            </section>
+            <section class="bg-light-1 no-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mt--170">
+                            <div class="cta">
+                                <div class="row">
+                                    <div class="col-md-9 text-md-left text-center mb-4 mb-md-0">
+                                        <div class="ot-heading">
+                                            <span>We Carry more Than Just Good Coding Skills</span>
+                                            <h2 class="main-heading">Let's Build Your Website!</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 text-md-right text-center align-self-end">
+                                        <a href="contact.html" class="octf-btn btn-border" role="button">contact us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-100"></div>
+                <div class="padding-half bg-light-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="partners">
+                                    <div class="owl-carousel owl-theme home-client-carousel">
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client1.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client2.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client3.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client4.png" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client5.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client6.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client1.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client2.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client3.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client4.png" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client5.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <div class="partners-slide">
+                                            <a href="index.html" class="client-logo">
+                                                <figure class="partners-slide-inner">
+                                                    <img class="partners-slide-image"
+                                                        src="images/client-logos/client6.svg" alt="">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-40"></div>
+            </section>
+            <br><br><br>
+            <section class="pt-0 pb-190">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="et_pb_column et_pb_column-blue cwebblue">
+                            <div class="et_pb_module">
+                                <div class="et_pb_text_inner">
+                                    <p style="color: white; margin: 0;">Read about our Services:</p>
+                                    <h1 style="color: white; font-size: 26px; margin: 0;">Website<br>Designing</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column">
+                            <div class="et_pb_with_border ">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>DIVI</li>
+                                        <li>Elementor</li>
+                                        <li>Gutenberg</li>
+                                        <li>Beaver Builder</li>
+                                        <li>kadence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column">
+                            <div class="et_pb_with_border">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>WordPress</li>
+                                        <li>Magento</li>
+                                        <li>Laravel</li>
+                                        <li>Figma</li>
+                                        <li>Webflow</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column">
+                            <div class="et_pb_with_border">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>Landing page</li>
+                                        <li>Pages / Post</li>
+                                        <li>Logo</li>
+                                        <li>Images</li>
+                                        <li>Contact Form</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="et_pb_column cwebblue" style="
+        background-color: #73DECC;
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-left: 50px;">
+                            <div class="et_pb_module">
+                                <div class="et_pb_text_inner">
+                                    <p style="color: white; margin: 0;">Read about our Services:</p>
+                                    <h1 style="color: white; font-size: 26px; margin: 0;">Website<br>Development</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column " style=" border-top: 2px solid #d6d6d6; 
+                        border-bottom: 1px solid #d6d6d6">
+                            <div class="et_pb_with_border ">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>PHP</li>
+                                        <li>Javascript</li>
+                                        <li>React</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column" style=" border-top: 2px solid #d6d6d6; 
+                        border-bottom: 1px solid #d6d6d6">
+                            <div class="et_pb_with_border">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>Angular</li>
+                                        <li>Node.js</li>
+                                        <li>Next.js</li>
+                                        <li>Vue.js</li>
+                                        <li>Dotnet</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column" style=" border-top: 2px solid #d6d6d6; 
+                        border-bottom: 1px solid #d6d6d6">
+                            <div class="et_pb_with_border">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>Hosting Setup</li>
+                                        <li>Email Automation</li>
+                                        <li>SMTP</li>
+                                        <li>API</li>
+                                        <li>Gateway</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="et_pb_column cwebblue" style="
+        background-color: #3B475C;
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-left: 50px;">
+                            <div class="et_pb_module">
+                                <div class="et_pb_text_inner">
+                                    <p style="color: white; margin: 0;">Read about our Services:</p>
+                                    <h1 style="color: white; font-size: 26px; margin: 0;">Seo<br>Department</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column ">
+                            <div class="et_pb_with_border ">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>Search console</li>
+                                        <li>Google Analytics</li>
+                                        <li>Tag manager</li>
+                                        <li>Google Indexing API</li>
+                                        <li>Google Business Profile</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column">
+                            <div class="et_pb_with_border">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>Resource Allocation</li>
+                                        <li>Performance Evaluation</li>
+                                        <li>Training and Development</li>
+                                        <li>Collaboration</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="et_pb_column">
+                            <div class="et_pb_with_border">
+                                <div class="et_pb_text_inner">
+                                    <ul>
+                                        <li>Content Strategy</li>
+                                        <li>Responsive</li>
+                                        <li>Visibilty</li>
+                                        <li>Optimized</li>
+                                        <li>LiteSpeed</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="technology-v1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ot-heading text-center text-white">
+                                <span>TECHNOLOGY INDEX</span>
+                                <h2 class="main-heading">We provide solutions with <br>the Goal of Trusting
+                                    Relationships
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-15"></div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <a class="tech-box text-center" href="WebDevlopement.html" target="_blank">
+                                <div class="icon-main"><span class="flaticon-code-1"></span></div>
+                                <h5>WEB</h5>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <a class="tech-box text-center" href="android.html">
+                                <div class="icon-main"><span class="flaticon-android"></span></div>
+                                <h5>Android</h5>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <a class="tech-box text-center" href="ios.html">
+                                <div class="icon-main"><span class="flaticon-apple"></span></div>
+                                <h5>IOS</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-map-dots">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ot-heading text-center">
+                                <span>our clients</span>
+                                <h2 class="main-heading">
+                                    We are Reliable
+                                    <br>Operating in 15+ Countries Globally
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-35"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="ot-testimonials">
+                                <div class="owl-carousel owl-theme testimonial-inner ot-testimonials-slider">
+                                    <div class="testi-item">
+                                        <div class="layer1"></div>
+                                        <div class="layer2">
+                                            <div class="t-head flex-middle">
+                                                <!-- <img src="images/testi2.png" alt="Emilia Clarke" class="lazyloaded"
+                                                data-ll-status="loaded"> -->
+                                                <div class="tinfo">
+                                                    <h6>The Brand Daddy,</h6>
+                                                    <span>Manager of Company</span>
+                                                </div>
+                                            </div>
+                                            <div class="ttext">
+                                                "Endless patience. No quick fixes. Meticulous and eloquent
+                                                communication. Well-defined milestones, deadlines, and efficient work,
+                                                even in the face of a negligent client. The highlight? Consistently
+                                                resolving challenges with innovative ideas!"
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testi-item">
+                                        <div class="layer1"></div>
+                                        <div class="layer2">
+                                            <div class="t-head flex-middle">
+                                                <!-- <img src="images/testi1.png" alt="Emilia Clarke" class="lazyloaded"
+                                                    data-ll-status="loaded"> -->
+                                                <div class="tinfo">
+                                                    <h6>The Brand Daddy,</h6>
+                                                    <span>Client of Company</span>
+                                                </div>
+                                            </div>
+                                            <div class="ttext">
+                                                "Thoughtful and well-articulated communication, accompanied by clear
+                                                milestones, deadlines, and efficient work. Demonstrates exceptional
+                                                patience, even in challenging situations with less attentive clients.
+                                                Remarkably adept at problem-solving, consistently generating innovative
+                                                ideas."
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testi-item">
+                                        <div class="layer1"></div>
+                                        <div class="layer2">
+                                            <div class="t-head flex-middle">
+                                                <!-- <img src="images/testi2.png" alt="Emilia Clarke" class="lazyloaded"
+                                                    data-ll-status="loaded"> -->
+                                                <div class="tinfo">
+                                                    <h6>The Brand Daddy nj </h6>
+                                                    <span>Manager of Company</span>
+                                                </div>
+                                            </div>
+                                            <div class="ttext">
+                                                "Patience. Infinite patience. No shortcuts. Very well thought out and
+                                                articulate communication. Clear milestones, deadlines and fast work.
+                                                Even if the client is being careless. The best part...always solving
+                                                problems with great original ideas!."
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testi-item">
+                                        <div class="layer1"></div>
+                                        <div class="layer2">
+                                            <div class="t-head flex-middle">
+                                                <img src="images/testi1.png" alt="Emilia Clarke" class="lazyloaded"
+                                                    data-ll-status="loaded">
+                                                <div class="tinfo">
+                                                    <h6>Moonkle LTD,</h6>
+                                                    <span>Client of Company</span>
+                                                </div>
+                                            </div>
+                                            <div class="ttext">
+                                                "Very well thought out and articulate communication. Clear milestones,
+                                                deadlines and fast work. Patience. Infinite patience. No shortcuts. Even
+                                                if the client is being careless. The best part...always solving problems
+                                                with great original ideas!."
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer id="site-footer" class="site-footer footer-v1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="widget-footer">
+                            <h5 class="text-white">Company</h5>
+                            <ul class="list-items">
+                                <li class="list-item"><a href="about-us.html">About</a></li>
+                                <li class="list-item"><a href="faq.html">FAQ</a></li>
+                                <li class="list-item"><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="widget-footer">
+                            <h5 class="text-white">Service</h5>
+                            <ul class="list-items">
+                                <li class="list-item"><a href="WebDevlopement.html">Web Development </a></li>
+                                <li class="list-item"><a href="MobileDevlopment.html">App Development</a></li>
+                                <li class="list-item"><a href="Digitalmarketing.html">Digital Marketing </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="widget-footer">
+                            <a href="blog-grid.html">
+                                <h5 class="text-white">Case Studies</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="widget-footer">
+                            <a href="blog.html">
+                                <h5 class="text-white">Blog</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="widget-footer">
+                            <a href="contact.html">
+                                <h5 class="text-white">Contact Us</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                        <div class="widget-footer">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-65">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div id="site-logo" class="site-logo">
+                            <a href="index.html">
+                                <img src="images/logoWhiteVacnic.svg" alt="Vacnic" class="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-left text-md-right align-self-center">
+                        <p class="copyright-text">Copyright © 2024 Vacnic Solution. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div><!-- #page -->
+    <a id="back-to-top" href="#" class="show"><i class="flaticon-up-arrow"></i></a>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/easypiechart.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/header-mobile.js"></script>
+    <!-- REVOLUTION JS FILES -->
+
+    <script src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
+
+    <!-- REVOLUTION SLIDER SCRIPT FILES -->
+    <script src="js/rev-script-2.js"></script>
+    <script src="js/royal_preloader.min.js"></script>
+    <script>
+        window.jQuery = window.$ = jQuery;
+        (function ($) {
+            "use strict";
+            //Preloader
+            Royal_Preloader.config({
+                logo_size: [160, 75],
+                showProgress: true,
+                showPercentage: true,
+                text_colour: '#000000',
+                background: '#ffffff'
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
